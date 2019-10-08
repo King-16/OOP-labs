@@ -1,0 +1,35 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+class Kasa{
+    unsigned int count=0;
+    double money=0;
+public:
+    void payingCars(){
+        count++;
+        money+=0.50;
+    }
+    void nopayCars(){
+        count++;
+    }
+    void Display(){
+        cout<<"Cars: "<<count<<"    Money: "<<money<<endl;
+    }
+};
+int main()
+{
+    cout<<"Write P for paying cars, N for no paying cars, ESC for exit"<<endl;
+    int input;
+    Kasa obj;
+    for(;;){
+    input=getch();
+    switch (input) {
+        case 'p' : obj.payingCars(); cout<<"Paying cars"<<endl; break;
+        case 'n' : obj.nopayCars(); cout<<"No paying cars"<<endl; break;
+        case 27 : obj.Display(); break;
+        default : cout<<"Error, try again"<<endl; break;
+    }
+    if(input==27) break;
+    }
+}
+//change

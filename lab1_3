@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class time {
+	int hours, minutes, seconds;
+
+
+public:
+	time() {
+		hours = 1;
+		minutes = 1;
+		seconds = 1;
+	}
+	time(int a, int b, int c) {
+		hours = a;
+		minutes = b;
+		seconds = c;
+	}
+	void printData() {
+		cout << hours << ':' << minutes << ':' << seconds << endl;
+	}
+	void Add(time a, time b) {
+		hours = a.hours + b.hours;
+		minutes = a.minutes + b.minutes;
+		seconds = a.seconds + b.seconds;
+	}
+};
+int main()
+{
+	time obj1;
+	obj1.printData();
+	time obj2(2, 4, 6);
+	obj2.printData();
+	time obj3;
+	obj3.Add(obj1, obj2);
+	obj3.printData();
+	system("pause");
+}

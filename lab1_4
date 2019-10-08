@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class prog {
+	int first, second;
+public:
+	int ipart() {
+		if (second != 0) return first / second;
+	}
+	void Init(int a, int b) {
+		first = a;
+		second = b;
+	}
+	void Read() {
+		cout << "Write first number: " << endl;
+		cin >> first;
+		cout << "Write first second: " << endl;
+		cin >> second;
+	}
+	void Display() {
+		cout << first << endl << second << endl;
+	}
+};
+
+int main()
+{
+	prog obj1;
+	obj1.Init(15, 3);
+	cout << obj1.ipart() << endl;
+	obj1.Display();
+	system("pause");
+
+}

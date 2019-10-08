@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+class Int{
+    int number;
+public:
+    int GetNumber(){
+        return number;
+    }
+    void SetZero(){
+        number=0;
+    }
+    void SetNumber(int a){
+        number=a;
+    }
+    int Add(Int a,Int b){
+        this->number=a.number+b.number;
+        return number;
+
+    };
+};
+
+int main()
+{
+    Int obj1;
+    obj1.SetNumber(5);
+    Int obj2;
+    obj2.SetNumber(7);
+    Int obj3;
+    obj3.SetNumber(obj1.GetNumber()+obj2.GetNumber());
+    cout<<obj3.GetNumber()<<endl<<obj3.Add(obj1,obj2);
+
+}

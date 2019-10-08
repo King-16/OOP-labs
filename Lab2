@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class Complex{
+
+	int imag,real;
+	public:
+	void Add(Complex first){
+		cout<<imag+first.imag<<"i+"<<real+first.real<<"j"<<endl;
+	}
+	void Set(int one, int two){
+		imag=one;
+		real=two;	
+	}
+
+};
+int main(int argc, char** argv) {
+	int i,r;
+	cout<<"Write imaginary number: "<<endl;
+	cin>>i;
+	cout<<"Write real number: "<<endl;
+	cin>>r;
+	Complex obj1;
+	obj1.Set(i,r);
+	
+	cout<<"Write imaginary number: "<<endl;
+	cin>>i;
+	cout<<"Write real number: "<<endl;
+	cin>>r;
+	Complex obj2;
+	obj2.Set(i,r);
+
+	
+	obj2.Add(obj1);
+	system("pause");
+	}
